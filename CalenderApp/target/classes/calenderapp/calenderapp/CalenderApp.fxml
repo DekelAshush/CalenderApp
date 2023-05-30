@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="676.0" prefWidth="962.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calenderapp.calenderapp.CalenderAppController">
+   <children>
+      <HBox alignment="TOP_CENTER" prefHeight="51.0" prefWidth="962.0">
+         <children>
+            <Label fx:id="dateL" prefHeight="45.0" prefWidth="778.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="35.0" prefWidth="962.0" spacing="60.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="82.0" text="Sunday" textAlignment="CENTER" />
+            <Label prefHeight="18.0" prefWidth="79.0" text="Monday" />
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="76.0" text="Tusday" />
+            <Label text="Wednesday" />
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="83.0" text="Thusday" />
+            <Label alignment="TOP_CENTER" prefHeight="18.0" prefWidth="78.0" text="Friday" />
+            <Label alignment="CENTER" prefHeight="18.0" prefWidth="80.0" text="Saturday" />
+         </children>
+      </HBox>
+      <GridPane fx:id="dayG" prefHeight="368.0" prefWidth="962.0">
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="962.0" spacing="10.0">
+         <children>
+            <Label text="Choose The Year" />
+            <ComboBox fx:id="yearC" onAction="#enterYear" prefHeight="26.0" prefWidth="139.0" />
+            <Label text="Choose The Month" />
+            <ComboBox fx:id="monthC" onAction="#enterMonth" prefHeight="26.0" prefWidth="139.0" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
